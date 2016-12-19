@@ -1,0 +1,24 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "node beginner",
+  "main": "index.js",
+  "dependencies": {
+    "formidable": "^1.0.17"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ataotao/Node.js.git"
+  },
+  "author": "Atao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ataotao/Node.js/issues"
+  },
+  "homepage": "https://github.com/ataotao/Node.js#readme"
+}
