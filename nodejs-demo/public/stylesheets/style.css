@@ -1,8 +1,7 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+ul{list-style: none; padding: 0; margin: 0;}
+.pad-5{padding: 5px;}
 
-a {
-  color: #00B7FF;
-}
+.menu-year{margin-bottom: 15px;}
+.menu-year .label{font-weight: normal;}
+.photo-list img{max-width: 100%; border-radius: 3px; border: solid 1px #EEE; padding: 3px;}
+.photo-list-line {margin-bottom: 15px;}

@@ -1,11 +1,24 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<% include ./include/header.ejs %>
+<% include ./include/nav.ejs %>
+
+<div class="container">
+  <!--menu-year-->
+  <div class="menu-year row">
+    <div class="col-xs-12">
+        <a href="2016" class="label <% if (current == 2016) { %> label-primary <% } else { %> label-default <% } %>">2016</a>
+        <a href="2015" class="label <% if (current == 2015) { %> label-primary <% } else { %> label-default <% } %>">2015</a>
+        <a href="2014" class="label <% if (current == 2014) { %> label-primary <% } else { %> label-default <% } %>">2014</a>
+    </div>
+  </div>
+  <!--photo-list-->
+  <ul class="row photo-list">
+  <% for (var i = 0; i < photolist.length; i++) { %>
+    <li class="col-xs-3 photo-list-line">
+      <img src="../<%= photolist[i].url %>">
+      <div class="text-center pad-5"><%= photolist[i].title %></div>
+    </li>
+  <% } %>
+  </ul>
+</div>
+
+<% include ./include/footer.ejs %>
