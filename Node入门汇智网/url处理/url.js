@@ -8,7 +8,7 @@ var url = require('url');
 
 console.log('-------------------- parse函数的基础用法 ----------------------');
 var parse;
-parse = url.parse('http://www.baidu.com')
+parse = url.parse('http://www.baidu.com');
 console.log(parse);
 
 /**
@@ -56,4 +56,4 @@ var resolve;
 resolve = url.resolve('http://example.com/', '/one');
 console.log(resolve); // 'http://example.com/one'
 resolve = url.resolve('/one/two/three', 'four');
-console.log(resolve) // '/one/two/four'
+console.log(resolve); // '/one/two/four'
