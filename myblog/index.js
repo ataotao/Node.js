@@ -1,9 +1,14 @@
 var path = require('path');
 var express = require('express');
+//session 中间件
 var session = require('express-session');
+//将 session 存储于 mongodb，结合 express-session 使用
 var MongoStore = require('connect-mongo')(session);
+//页面通知提示的中间件，基于 session 实现
 var flash = require('connect-flash');
+//读取配置文件
 var config = require('config-lite');
+//路由
 var routes = require('./routes');
 var pkg = require('./package');
 
@@ -59,9 +64,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-
-
-// 路由
+// 路由执行
 routes(app);
 
 // 监听端口，启动程序

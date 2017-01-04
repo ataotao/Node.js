@@ -23,6 +23,7 @@
 - sha1: sha1 加密，用于密码加密
 - winston: 日志
 - express-winston: 基于 winston 的用于 express 的日志中间件
+- package(pkg) = package.json: 存储项目名、描述、作者、依赖等等信息
 
 
 功能及路由设计如下：

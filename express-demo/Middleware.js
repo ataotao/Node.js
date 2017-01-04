@@ -147,28 +147,28 @@ router.use('/error', function(err, req, res, next) {
  * 参数 root 指提供静态资源的根目录。
  * 可选的 options 参数拥有如下属性。
  * 属性	            描述	                                                  类型	                                        缺省值
- * dotfiles	         是否对外输出文件名以点（.）开头的文件。                       可选值为 “allow”、“deny” 和 “ignore”	String	   “ignore”
+ * dotfiles	         是否对外输出文件名以点（.）开头的文件。                     可选值为 “allow”、“deny” 和 “ignore”	String	   “ignore”
  * etag	             是否启用 etag 生成	                                     Boolean	                                    true
- * extensions	     设置文件扩展名备份选项	                                  Array	                                         []
+ * extensions	     设置文件扩展名备份选项	                                    Array	                                         []
  * index	         发送目录索引文件，设置为 false                              禁用目录索引。	Mixed	                        “index.html”
- * lastModified	     设置 Last-Modified 头为文件在操作系统上的最后修改日期。        可能值为 true 或 false。	                        Boolean	true
+ * lastModified	     设置 Last-Modified 头为文件在操作系统上的最后修改日期。      可能值为 true 或 false。	                        Boolean	true
  * maxAge	         以毫秒或者其字符串格式设置 Cache-Control 头的 max-age 属性。	  Number	                                     0
- * redirect	         当路径为目录时，重定向至 “/”。	                             Boolean	                                    true
+ * redirect	         当路径为目录时，重定向至 “/”。	                           Boolean	                                    true
  * setHeaders	     设置 HTTP 头以提供文件的函数。	                              Function	 
  */
 
 //options 非比填
 var options = {
-    dotfiles: 'ignore',
-    etag: false,
-    extensions: ['htm', 'html'],
-    index: false,
-    maxAge: '1d',
-    redirect: false,
-    setHeaders: function (res, path, stat) {
-        res.set('x-timestamp', Date.now());
-    }
-}
+  dotfiles: 'ignore',
+  etag: false,
+  extensions: ['htm', 'html'],
+  index: false,
+  maxAge: '1d',
+  redirect: false,
+  setHeaders: function (res, path, stat) {
+    res.set('x-timestamp', Date.now());
+  }
+};
 
 //将资源文件夹指向到public ， 访问http://localhost:3000/images/pic1.jpg
 app.use(express.static('public', options));
@@ -198,11 +198,11 @@ app.get('/cookie', function (req, res) {
   // Cookies that have been signed
   console.log('Signed Cookies: ', req.signedCookies);
   res.send('Cookies: ' + JSON.stringify(req.cookies));
-})
+});
 
 
 var server = app.listen(3000, function () {
   var host = server.address().address;
   var port = server.address().port;
-//   console.log('Example app listening at http://%s:%s', host, port);
+  console.log('Example app listening at http://%s:%s', host, port);
 });

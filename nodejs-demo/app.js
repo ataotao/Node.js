@@ -53,5 +53,5 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-// 输出模型app
+//输出模型app
 module.exports = app;

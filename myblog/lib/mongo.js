@@ -6,7 +6,7 @@ var config = require('config-lite');
 // 配置Mongolass
 var Mongolass = require('mongolass');
 var mongolass = new Mongolass();
-console.log(mongolass);
+
 //连接数据库
 mongolass.connect(config.mongodb);
 
