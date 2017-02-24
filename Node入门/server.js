@@ -1,9 +1,9 @@
-// var http = require("http");
+// var http = require('http');
 
 // http.createServer(function(request, response) {
 
-//   response.writeHead(200, {"Content-Type": "text/plain"});
-//   response.write("Hello World");
+//   response.writeHead(200, {'Content-Type': 'text/plain'});
+//   response.write('Hello World');
 //   response.end();
 // }).listen(8888);
 
@@ -12,18 +12,18 @@
   那是因为大部分浏览器都会在你访问 http://localhost:8888/ 时尝试读取 http://localhost:8888/favicon.ico )
 */
 
-var http = require("http");
-var url = require("url");
+var http = require('http');
+var url = require('url');
 
 function start(route, handle) {
-  function onRequest(request, response) {
-    var pathname = url.parse(request.url).pathname;
-    console.log("Request for " + pathname + " received.");
-    route(handle, pathname, response, request);
-  }
+    function onRequest(request, response) {
+        var pathname = url.parse(request.url).pathname;
+        console.log('Request for ' + pathname + ' received.');
+        route(handle, pathname, response, request);
+    }
 
-  http.createServer(onRequest).listen(15000);
-  console.log("Server has started.");
+    http.createServer(onRequest).listen(15000);
+    console.log('Server has started.');
 }
 
 exports.start = start;
