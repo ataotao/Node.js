@@ -1,0 +1,20 @@
+{
+  "name": "ataotao",
+  "version": "0.0.1",
+  "description": "A module for learning perpose.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ataotao <taozhiw@gmail.com> (https://github.com/ataotao/)",
+  "license": "ISC",
+  "homepage": "https://ataotao.github.io/",
+  "repository": {
+    "url": "https://github.com/ataotao/"
+  },
+  "engines": {
+    "node": "~6.9.2"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
