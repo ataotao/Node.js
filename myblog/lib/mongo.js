@@ -32,8 +32,6 @@ exports.User = mongolass.model('User', {
 });
 exports.User.index({ name: 1 }, { unique: true }).exec();// 根据用户名找到用户，用户名全局唯一
 
-
-
 exports.Post = mongolass.model('Post', {
     author: { type: Mongolass.Types.ObjectId },
     title: { type: 'string' },
