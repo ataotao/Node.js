@@ -1,4 +1,8 @@
 <%- include('header') %>
-这是主页
-<%= locals.blog.name %>
+
+<% posts.forEach(function (post) { %>
+    <!--components/post-content 文章模板页面-->
+    <%- include('components/post-content', { post: post }) %>
+<% }) %>
+
 <%- include('footer') %>

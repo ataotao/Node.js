@@ -1,12 +1,16 @@
 <div class="nav">
-  <div class="ui grid">
-    <div class="four wide column"></div>
+    <div class="ui grid">
+        <div class="four wide column"></div>
 
-    <div class="eight wide column">
-      <!--渲染app.locals.title-->
-      <a href="/posts"><h1><%= blog.title %></h1></a>
-      <!--渲染app.locals.description-->
-      <p><%= blog.description %></p>
+        <div class="eight wide column">
+            <a href="/posts">
+                <h1>
+                    <%= blog.title %>
+                </h1>
+            </a>
+            <p>
+                <%= blog.description %>
+            </p>
+        </div>
     </div>
-  </div>
 </div>
